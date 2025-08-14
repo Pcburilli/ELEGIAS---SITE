@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+:root {
+  --ver_escuro: #581323;
+
+  --papiro: #f4e4c1;
+
+  --dourado: #b7a66b;
+
+  --preto: black;
+
+  --branco: white;
+}
+
+@font-face {
+  font-family: 'normal';
+  src: url('../wiki/fontes/NotoSans-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'normal2';
+  src: url('../wiki/fontes/SortsMillGoudy-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'titulo';
+  src: url('../wiki/fontes/HU\ The\ Game.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'anjo';
+  src: url('../wiki/fontes/Angel\ rhapsody.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'titulo2';
+  src: url('../wiki/fontes/IMFellEnglish-Regular.ttf') format('truetype');
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ver_escuro);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--papiro);
+  border-radius: 10px;
+  border: 3px solid var(--ver_escuro);
+}
+
+body {
+  background-color: var(--papiro);
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Cabeçalho */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  position: fixed;
+  background-color: var(--ver_escuro);
+  height: 4em;
+  width: 100%;
+  z-index: 900;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.itens_header {
+  color: var(--papiro);
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+#img_logo {
+  width: 3.5em;
+}
+
+#logo > h1 {
+  font-family: 'titulo', serif;
+  font-size: 3em;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+  font-size: 1.3em;
+  margin: 0px 5px 0px 5px;
+  min-width: 409px;
+  visibility: visible;
+}
+
+#nav_normal.esconder {
+  display: none;
+}
+
+#wiki {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-right: 10px;
+  width: 228px;
+}
+
+#wiki > a {
+  margin-right: 5px;
+}
+
+#img_logo, #img_logo_wiki {
+  width: 3.5em;
+}
+
+.links {
+  color: var(--cor-borgonha);
+  font-family: 'anjo', serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.links:hover {
+  color: var(--dourado);
+}
+
+nav#nav_tela_p {
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--ver_escuro);
+  color: var(--papiro);
+  width: 100%;
+  height: 2em;
+  z-index: 900;
+  margin-top: 64px;
+  font-size: 1em;
+  margin-left: 0px;
+  box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.4);
+}
+
+#nav_tela_p.mostrar {
+  visibility: visible;
+}
